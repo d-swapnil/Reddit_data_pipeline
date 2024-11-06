@@ -57,3 +57,8 @@ This screenshot shows the Airflow DAG structure, which manages and schedules the
 ![AWS Glue job running proof](images/glue_job.png)
 
 The AWS Glue job handles data transformation and schema mapping.
+
+3. **AWS Reshift Data**:
+![AWS redshift data load proof](images/Screenshot 2024-11-06 160522.png)
+
+The AWS Glue job handles data transformation and schema mapping.
