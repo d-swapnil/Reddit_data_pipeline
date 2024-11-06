@@ -1,5 +1,7 @@
 # Reddit Data Pipeline
 
+![Architecture Diagram](images/Blank_diagram.jpeg)
+
 This project provides a comprehensive data pipeline solution to extract, transform, and load (ETL) Reddit data into a Redshift data warehouse. The pipeline leverages a combination of tools and services, including Apache Airflow, Celery, PostgreSQL, Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift, to ensure efficient and scalable data management.
 
 ## Table of Contents
@@ -30,10 +32,6 @@ The architecture of the pipeline includes the following components:
 - **Amazon Athena**: SQL-based data transformation.
 - **Amazon Redshift**: Data warehousing for analytics.
 
-Here’s a high-level overview of the architecture:
-
-![Architecture Diagram](images/Blank_diagram.jpeg)
-
 ## Prerequisites
 
 - An **AWS Account** with permissions for S3, Glue, Athena, and Redshift.
@@ -52,11 +50,11 @@ Here’s a high-level overview of the architecture:
 ## Screenshots
 
 1. **Airflow DAG**:
+![Airflow running proof](images/airflow.png)
 
 This screenshot shows the Airflow DAG structure, which manages and schedules the tasks in the ETL process.
 
 2. **AWS Glue Job**:
-The AWS Glue job handles data transformation and schema mapping.
+![AWS Glue job running proof](images/glue_job.png)
 
-3. **Workflow Diagram**:
-Below is the complete data pipeline flow for extracting, transforming, and loading data from Reddit to Amazon Redshift.
+The AWS Glue job handles data transformation and schema mapping.
