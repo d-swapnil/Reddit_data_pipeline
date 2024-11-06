@@ -32,7 +32,7 @@ The architecture of the pipeline includes the following components:
 
 Here’s a high-level overview of the architecture:
 
-![Architecture Diagram]()
+![Architecture Diagram](.images/Blank_diagram.jpeg)
 
 ## Prerequisites
 
