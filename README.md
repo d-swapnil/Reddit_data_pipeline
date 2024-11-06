@@ -49,9 +49,14 @@ Here’s a high-level overview of the architecture:
 4. **Data Storage**: Saves transformed data in an S3 bucket.
 5. **Data Loading**: Loads data into Amazon Redshift for advanced analytics.
 
-## Setup Instructions
+## Screenshots
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd Reddit_data_pipeline
+1. **Airflow DAG**:
+
+This screenshot shows the Airflow DAG structure, which manages and schedules the tasks in the ETL process.
+
+2. **AWS Glue Job**:
+The AWS Glue job handles data transformation and schema mapping.
+
+3. **Workflow Diagram**:
+Below is the complete data pipeline flow for extracting, transforming, and loading data from Reddit to Amazon Redshift.
