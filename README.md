@@ -9,7 +9,6 @@ This project provides a comprehensive data pipeline solution to extract, transfo
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Pipeline Workflow](#pipeline-workflow)
-- [Setup Instructions](#setup-instructions)
 - [Screenshots](#screenshots)
 
 ## Overview
