@@ -61,4 +61,4 @@ The AWS Glue job handles data transformation and schema mapping.
 3. **AWS Reshift Data**:
 ![AWS redshift data load proof](images/aws_redshift_data_load.png)
 
-The AWS Glue job handles data transformation and schema mapping.
+AWS Redshift is a Data Warehouse that can be used for OLAP purposes.
