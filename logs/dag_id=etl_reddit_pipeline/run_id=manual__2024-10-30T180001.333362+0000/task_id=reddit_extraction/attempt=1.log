@@ -1,0 +1,144 @@
+[2024-10-30T18:00:11.683+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T18:00:11.740+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T18:00:01.333362+00:00 [queued]>
+[2024-10-30T18:00:11.784+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T18:00:01.333362+00:00 [queued]>
+[2024-10-30T18:00:11.786+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-30T18:00:11.855+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-30 18:00:01.333362+00:00
+[2024-10-30T18:00:11.882+0000] {standard_task_runner.py:72} INFO - Started process 117 to run task
+[2024-10-30T18:00:11.888+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-30T18:00:01.333362+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpq_2r8__v']
+[2024-10-30T18:00:11.893+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask reddit_extraction
+[2024-10-30T18:00:12.059+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T18:00:01.333362+00:00 [running]> on host 7b24bd777bb7
+[2024-10-30T18:00:12.350+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T18:00:01.333362+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T18:00:01.333362+00:00'
+[2024-10-30T18:00:12.355+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T18:00:12.399+0000] {logging_mixin.py:190} WARNING - Version 7.8.0 of praw is outdated. Version 7.8.1 was released 4 days ago.
+[2024-10-30T18:00:12.411+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-30T18:00:12.413+0000] {logging_mixin.py:190} INFO - Extracting posts from python, attempt 1
+[2024-10-30T18:00:12.415+0000] {logging_mixin.py:190} INFO - <praw.models.listing.generator.ListingGenerator object at 0x7f0150db12d0> <<<<<<first post prinmt hona chahiye
+[2024-10-30T18:00:12.832+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/pipelines/reddit_pipeline.py", line 13, in reddit_pipeline
+    posts = extract_posts(instance, subreddit, limit = 10)
+  File "/opt/airflow/etls/reddit_etl.py", line 31, in extract_posts
+    for post in posts:
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/models/listing/generator.py", line 66, in __next__
+    self._next_batch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/models/listing/generator.py", line 90, in _next_batch
+    self._listing = self._reddit.get(self.url, params=self.params)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/util/deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 731, in get
+    return self._objectify_request(method="GET", params=params, path=path)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 514, in _objectify_request
+    self.request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/util/deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 963, in request
+    return self._core.request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 328, in request
+    return self._request_with_retries(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/rate_limit.py", line 46, in call
+    kwargs["headers"] = set_header_callback()
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 282, in _set_header_callback
+    self._authorizer.refresh()
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 378, in refresh
+    self._request_token(grant_type="client_credentials", **additional_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 155, in _request_token
+    response = self._authenticator._post(url=url, **data)
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 59, in _post
+    raise ResponseException(response)
+prawcore.exceptions.ResponseException: received 401 HTTP response
+[2024-10-30T18:00:12.849+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-30T18:00:01.333362+00:00, execution_date=20241030T180001, start_date=20241030T180011, end_date=20241030T180012
+[2024-10-30T18:00:12.876+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T18:00:12.878+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 19 for task reddit_extraction (received 401 HTTP response; 117)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/pipelines/reddit_pipeline.py", line 13, in reddit_pipeline
+    posts = extract_posts(instance, subreddit, limit = 10)
+  File "/opt/airflow/etls/reddit_etl.py", line 31, in extract_posts
+    for post in posts:
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/models/listing/generator.py", line 66, in __next__
+    self._next_batch()
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/models/listing/generator.py", line 90, in _next_batch
+    self._listing = self._reddit.get(self.url, params=self.params)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/util/deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 731, in get
+    return self._objectify_request(method="GET", params=params, path=path)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 514, in _objectify_request
+    self.request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/util/deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/praw/reddit.py", line 963, in request
+    return self._core.request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 328, in request
+    return self._request_with_retries(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/rate_limit.py", line 46, in call
+    kwargs["headers"] = set_header_callback()
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/sessions.py", line 282, in _set_header_callback
+    self._authorizer.refresh()
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 378, in refresh
+    self._request_token(grant_type="client_credentials", **additional_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 155, in _request_token
+    response = self._authenticator._post(url=url, **data)
+  File "/home/airflow/.local/lib/python3.10/site-packages/prawcore/auth.py", line 59, in _post
+    raise ResponseException(response)
+prawcore.exceptions.ResponseException: received 401 HTTP response
+[2024-10-30T18:00:12.915+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-30T18:00:12.945+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T18:00:12.953+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

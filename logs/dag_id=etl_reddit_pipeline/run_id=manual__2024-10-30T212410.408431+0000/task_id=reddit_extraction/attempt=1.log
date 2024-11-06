@@ -1,0 +1,44 @@
+[2024-10-30T21:24:12.853+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T21:24:12.873+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T21:24:10.408431+00:00 [queued]>
+[2024-10-30T21:24:12.881+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T21:24:10.408431+00:00 [queued]>
+[2024-10-30T21:24:12.882+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-30T21:24:12.901+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-30 21:24:10.408431+00:00
+[2024-10-30T21:24:12.908+0000] {standard_task_runner.py:72} INFO - Started process 54 to run task
+[2024-10-30T21:24:12.911+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-30T21:24:10.408431+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmp8_39607q']
+[2024-10-30T21:24:12.914+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask reddit_extraction
+[2024-10-30T21:24:12.963+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T21:24:10.408431+00:00 [running]> on host 9736bc968700
+[2024-10-30T21:24:13.038+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T21:24:10.408431+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T21:24:10.408431+00:00'
+[2024-10-30T21:24:13.041+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T21:24:13.059+0000] {logging_mixin.py:190} WARNING - Version 7.8.0 of praw is outdated. Version 7.8.1 was released 4 days ago.
+[2024-10-30T21:24:13.061+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-30T21:24:13.062+0000] {logging_mixin.py:190} INFO - Extracting posts from Python, attempt 1
+[2024-10-30T21:24:13.063+0000] {logging_mixin.py:190} INFO - <praw.models.listing.generator.ListingGenerator object at 0x7f4bff7412d0> <<<<<<first post print hona chahiye
+[2024-10-30T21:24:13.591+0000] {logging_mixin.py:190} INFO - Posts extracted: 1
+[2024-10-30T21:24:13.592+0000] {logging_mixin.py:190} INFO - Posts extracted: 2
+[2024-10-30T21:24:13.592+0000] {logging_mixin.py:190} INFO - Posts extracted: 3
+[2024-10-30T21:24:13.593+0000] {logging_mixin.py:190} INFO - Posts extracted: 4
+[2024-10-30T21:24:13.593+0000] {logging_mixin.py:190} INFO - Posts extracted: 5
+[2024-10-30T21:24:13.594+0000] {logging_mixin.py:190} INFO - Posts extracted: 6
+[2024-10-30T21:24:13.594+0000] {logging_mixin.py:190} INFO - Posts extracted: 7
+[2024-10-30T21:24:13.595+0000] {logging_mixin.py:190} INFO - Posts extracted: 8
+[2024-10-30T21:24:13.595+0000] {logging_mixin.py:190} INFO - Posts extracted: 9
+[2024-10-30T21:24:13.596+0000] {logging_mixin.py:190} INFO - Posts extracted: 10
+[2024-10-30T21:24:13.612+0000] {logging_mixin.py:190} INFO -        id                                              title  ...  spoiler  stickied
+0  g53lxf  Lad wrote a Python script to download Alexa vo...  ...    False     False
+1  hoolsm                                     This post has:  ...    False     False
+2  gftejm  I redesign the Python logo to make it more modern  ...    False     False
+3  7kpme8     Automate the boring stuff with python - tinder  ...    False     False
+4  irh8l0  I'm excited to share my first published book, ...  ...    False     False
+5  gn9add  Drawing Mona Lisa with 256 circles using evolu...  ...    False     False
+6  hqc7ol  I made a simulation using Python in which a ne...  ...    False     False
+7  ghxqod  Thanks to everyone’s advice, my mouse drawing ...  ...    False     False
+8  iehths                              Debugging Cheat Sheet  ...    False     False
+9  dg0etx  Just trying to create a orbit system in python...  ...    False     False
+
+[10 rows x 11 columns]
+[2024-10-30T21:24:13.614+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-30T21:24:13.622+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T21:24:13.623+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-30T21:24:10.408431+00:00, execution_date=20241030T212410, start_date=20241030T212412, end_date=20241030T212413
+[2024-10-30T21:24:13.648+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-30T21:24:13.663+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T21:24:13.676+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,75 @@
+[2024-10-30T22:02:39.733+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T22:02:39.775+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:02:37.949197+00:00 [queued]>
+[2024-10-30T22:02:39.790+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:02:37.949197+00:00 [queued]>
+[2024-10-30T22:02:39.798+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-30T22:02:39.825+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-30 22:02:37.949197+00:00
+[2024-10-30T22:02:39.832+0000] {standard_task_runner.py:72} INFO - Started process 74 to run task
+[2024-10-30T22:02:39.836+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-30T22:02:37.949197+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpv82gvq4x']
+[2024-10-30T22:02:39.839+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask reddit_extraction
+[2024-10-30T22:02:39.886+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:02:37.949197+00:00 [running]> on host 9736bc968700
+[2024-10-30T22:02:39.966+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T22:02:37.949197+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T22:02:37.949197+00:00'
+[2024-10-30T22:02:39.968+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T22:02:39.980+0000] {logging_mixin.py:190} WARNING - Version 7.8.0 of praw is outdated. Version 7.8.1 was released 5 days ago.
+[2024-10-30T22:02:39.982+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-30T22:02:39.982+0000] {logging_mixin.py:190} INFO - <praw.reddit.Reddit object at 0x7f4bff73d300>
+[2024-10-30T22:02:39.983+0000] {logging_mixin.py:190} INFO - Extracting posts from Python, attempt 1
+[2024-10-30T22:02:40.789+0000] {logging_mixin.py:190} INFO - Posts extracted: 1
+[2024-10-30T22:02:40.789+0000] {logging_mixin.py:190} INFO - Posts extracted: 2
+[2024-10-30T22:02:40.790+0000] {logging_mixin.py:190} INFO - Posts extracted: 3
+[2024-10-30T22:02:40.791+0000] {logging_mixin.py:190} INFO - Posts extracted: 4
+[2024-10-30T22:02:40.791+0000] {logging_mixin.py:190} INFO - Posts extracted: 5
+[2024-10-30T22:02:40.792+0000] {logging_mixin.py:190} INFO - Posts extracted: 6
+[2024-10-30T22:02:40.792+0000] {logging_mixin.py:190} INFO - Posts extracted: 7
+[2024-10-30T22:02:40.792+0000] {logging_mixin.py:190} INFO - Posts extracted: 8
+[2024-10-30T22:02:40.793+0000] {logging_mixin.py:190} INFO - Posts extracted: 9
+[2024-10-30T22:02:40.793+0000] {logging_mixin.py:190} INFO - Posts extracted: 10
+[2024-10-30T22:02:40.794+0000] {logging_mixin.py:190} INFO - Posts extracted: 11
+[2024-10-30T22:02:40.794+0000] {logging_mixin.py:190} INFO - Posts extracted: 12
+[2024-10-30T22:02:40.795+0000] {logging_mixin.py:190} INFO - Posts extracted: 13
+[2024-10-30T22:02:40.795+0000] {logging_mixin.py:190} INFO - Posts extracted: 14
+[2024-10-30T22:02:40.796+0000] {logging_mixin.py:190} INFO - Posts extracted: 15
+[2024-10-30T22:02:40.797+0000] {logging_mixin.py:190} INFO - Posts extracted: 16
+[2024-10-30T22:02:40.797+0000] {logging_mixin.py:190} INFO - Posts extracted: 17
+[2024-10-30T22:02:40.798+0000] {logging_mixin.py:190} INFO - Posts extracted: 18
+[2024-10-30T22:02:40.798+0000] {logging_mixin.py:190} INFO - Posts extracted: 19
+[2024-10-30T22:02:40.799+0000] {logging_mixin.py:190} INFO - Posts extracted: 20
+[2024-10-30T22:02:40.799+0000] {logging_mixin.py:190} INFO - Posts extracted: 21
+[2024-10-30T22:02:40.800+0000] {logging_mixin.py:190} INFO - Posts extracted: 22
+[2024-10-30T22:02:40.800+0000] {logging_mixin.py:190} INFO - Posts extracted: 23
+[2024-10-30T22:02:40.801+0000] {logging_mixin.py:190} INFO - Posts extracted: 24
+[2024-10-30T22:02:40.802+0000] {logging_mixin.py:190} INFO - Posts extracted: 25
+[2024-10-30T22:02:40.802+0000] {logging_mixin.py:190} INFO - {'id': 'goldxf', 'title': 'A tool that copies a selected area of your screen, not as a picture, but as pastable text (GitHub in comments)', 'score': 4122, 'num_comments': 189, 'author': Redditor(name='PR0T064'), 'created_utc': 1590161211.0, 'url': 'https://v.redd.it/6guhj6h62c051', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}
+[2024-10-30T22:02:40.822+0000] {logging_mixin.py:190} INFO -         id  ... stickied
+0   g53lxf  ...    False
+1   hoolsm  ...    False
+2   gftejm  ...    False
+3   7kpme8  ...    False
+4   irh8l0  ...    False
+5   gn9add  ...    False
+6   hqc7ol  ...    False
+7   ghxqod  ...    False
+8   iehths  ...    False
+9   dg0etx  ...    False
+10  gbko3e  ...    False
+11  hmoabi  ...    False
+12  hpr28u  ...    False
+13  7jti46  ...    False
+14  gzila7  ...    False
+15  f55076  ...    False
+16  ga7y7f  ...    False
+17  hg9sk8  ...    False
+18  e9fgjp  ...    False
+19  cmdbuf  ...    False
+20  fjqoxv  ...    False
+21  fr5561  ...    False
+22  7mwgtw  ...    False
+23  gs7xdb  ...    False
+24  goldxf  ...    False
+
+[25 rows x 11 columns]
+[2024-10-30T22:02:40.823+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-30T22:02:40.831+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T22:02:40.831+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-30T22:02:37.949197+00:00, execution_date=20241030T220237, start_date=20241030T220239, end_date=20241030T220240
+[2024-10-30T22:02:40.853+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-30T22:02:40.867+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T22:02:40.872+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2024-11-06T19:27:51.391+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-06T19:27:51.406+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.s3_upload manual__2024-11-06T19:27:30.512441+00:00 [queued]>
+[2024-11-06T19:27:51.413+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.s3_upload manual__2024-11-06T19:27:30.512441+00:00 [queued]>
+[2024-11-06T19:27:51.415+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-06T19:27:51.428+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): s3_upload> on 2024-11-06 19:27:30.512441+00:00
+[2024-11-06T19:27:51.433+0000] {standard_task_runner.py:72} INFO - Started process 118 to run task
+[2024-11-06T19:27:51.435+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 's3_upload', 'manual__2024-11-06T19:27:30.512441+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpmqjq2upm']
+[2024-11-06T19:27:51.438+0000] {standard_task_runner.py:105} INFO - Job 27: Subtask s3_upload
+[2024-11-06T19:27:51.475+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.s3_upload manual__2024-11-06T19:27:30.512441+00:00 [running]> on host 3a2fdfeb3856
+[2024-11-06T19:27:51.541+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='s3_upload' AIRFLOW_CTX_EXECUTION_DATE='2024-11-06T19:27:30.512441+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-06T19:27:30.512441+00:00'
+[2024-11-06T19:27:51.543+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-06T19:27:51.567+0000] {logging_mixin.py:190} INFO - Connected to S3
+[2024-11-06T19:27:51.892+0000] {logging_mixin.py:190} INFO - Bucket already exists
+[2024-11-06T19:27:52.190+0000] {logging_mixin.py:190} INFO - File uploaded to s3://swapn1l-reddit-data-bucket/raw_data/reddit_20241106.csv
+[2024-11-06T19:27:52.191+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-06T19:27:52.201+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-06T19:27:52.202+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=s3_upload, run_id=manual__2024-11-06T19:27:30.512441+00:00, execution_date=20241106T192730, start_date=20241106T192751, end_date=20241106T192752
+[2024-11-06T19:27:52.252+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-06T19:27:52.266+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-06T19:27:52.271+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,74 @@
+[2024-10-30T22:00:13.141+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T22:00:13.153+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:00:11.268219+00:00 [queued]>
+[2024-10-30T22:00:13.160+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:00:11.268219+00:00 [queued]>
+[2024-10-30T22:00:13.161+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-30T22:00:13.178+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-30 22:00:11.268219+00:00
+[2024-10-30T22:00:13.189+0000] {standard_task_runner.py:72} INFO - Started process 66 to run task
+[2024-10-30T22:00:13.194+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-30T22:00:11.268219+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpyzk4r1ac']
+[2024-10-30T22:00:13.198+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask reddit_extraction
+[2024-10-30T22:00:13.262+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:00:11.268219+00:00 [running]> on host 9736bc968700
+[2024-10-30T22:00:13.338+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T22:00:11.268219+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T22:00:11.268219+00:00'
+[2024-10-30T22:00:13.342+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T22:00:13.362+0000] {logging_mixin.py:190} WARNING - Version 7.8.0 of praw is outdated. Version 7.8.1 was released 5 days ago.
+[2024-10-30T22:00:13.364+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-30T22:00:13.365+0000] {logging_mixin.py:190} INFO - <praw.reddit.Reddit object at 0x7f4bff73d3f0>
+[2024-10-30T22:00:13.366+0000] {logging_mixin.py:190} INFO - Extracting posts from Python, attempt 1
+[2024-10-30T22:00:14.036+0000] {logging_mixin.py:190} INFO - Posts extracted: 1
+[2024-10-30T22:00:14.037+0000] {logging_mixin.py:190} INFO - Posts extracted: 2
+[2024-10-30T22:00:14.037+0000] {logging_mixin.py:190} INFO - Posts extracted: 3
+[2024-10-30T22:00:14.038+0000] {logging_mixin.py:190} INFO - Posts extracted: 4
+[2024-10-30T22:00:14.039+0000] {logging_mixin.py:190} INFO - Posts extracted: 5
+[2024-10-30T22:00:14.039+0000] {logging_mixin.py:190} INFO - Posts extracted: 6
+[2024-10-30T22:00:14.040+0000] {logging_mixin.py:190} INFO - Posts extracted: 7
+[2024-10-30T22:00:14.040+0000] {logging_mixin.py:190} INFO - Posts extracted: 8
+[2024-10-30T22:00:14.041+0000] {logging_mixin.py:190} INFO - Posts extracted: 9
+[2024-10-30T22:00:14.041+0000] {logging_mixin.py:190} INFO - Posts extracted: 10
+[2024-10-30T22:00:14.042+0000] {logging_mixin.py:190} INFO - Posts extracted: 11
+[2024-10-30T22:00:14.042+0000] {logging_mixin.py:190} INFO - Posts extracted: 12
+[2024-10-30T22:00:14.043+0000] {logging_mixin.py:190} INFO - Posts extracted: 13
+[2024-10-30T22:00:14.043+0000] {logging_mixin.py:190} INFO - Posts extracted: 14
+[2024-10-30T22:00:14.044+0000] {logging_mixin.py:190} INFO - Posts extracted: 15
+[2024-10-30T22:00:14.044+0000] {logging_mixin.py:190} INFO - Posts extracted: 16
+[2024-10-30T22:00:14.044+0000] {logging_mixin.py:190} INFO - Posts extracted: 17
+[2024-10-30T22:00:14.045+0000] {logging_mixin.py:190} INFO - Posts extracted: 18
+[2024-10-30T22:00:14.045+0000] {logging_mixin.py:190} INFO - Posts extracted: 19
+[2024-10-30T22:00:14.046+0000] {logging_mixin.py:190} INFO - Posts extracted: 20
+[2024-10-30T22:00:14.046+0000] {logging_mixin.py:190} INFO - Posts extracted: 21
+[2024-10-30T22:00:14.047+0000] {logging_mixin.py:190} INFO - Posts extracted: 22
+[2024-10-30T22:00:14.047+0000] {logging_mixin.py:190} INFO - Posts extracted: 23
+[2024-10-30T22:00:14.048+0000] {logging_mixin.py:190} INFO - Posts extracted: 24
+[2024-10-30T22:00:14.048+0000] {logging_mixin.py:190} INFO - Posts extracted: 25
+[2024-10-30T22:00:14.067+0000] {logging_mixin.py:190} INFO -         id  ... stickied
+0   g53lxf  ...    False
+1   hoolsm  ...    False
+2   gftejm  ...    False
+3   7kpme8  ...    False
+4   irh8l0  ...    False
+5   gn9add  ...    False
+6   hqc7ol  ...    False
+7   ghxqod  ...    False
+8   iehths  ...    False
+9   dg0etx  ...    False
+10  gbko3e  ...    False
+11  hmoabi  ...    False
+12  hpr28u  ...    False
+13  7jti46  ...    False
+14  gzila7  ...    False
+15  f55076  ...    False
+16  ga7y7f  ...    False
+17  hg9sk8  ...    False
+18  e9fgjp  ...    False
+19  cmdbuf  ...    False
+20  fjqoxv  ...    False
+21  fr5561  ...    False
+22  7mwgtw  ...    False
+23  gs7xdb  ...    False
+24  goldxf  ...    False
+
+[25 rows x 11 columns]
+[2024-10-30T22:00:14.068+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-30T22:00:14.077+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T22:00:14.078+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-30T22:00:11.268219+00:00, execution_date=20241030T220011, start_date=20241030T220013, end_date=20241030T220014
+[2024-10-30T22:00:14.134+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-30T22:00:14.149+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T22:00:14.153+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

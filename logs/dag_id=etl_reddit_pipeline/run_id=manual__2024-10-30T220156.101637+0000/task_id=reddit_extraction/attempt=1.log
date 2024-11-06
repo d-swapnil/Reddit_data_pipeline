@@ -1,0 +1,75 @@
+[2024-10-30T22:01:58.065+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T22:01:58.080+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:01:56.101637+00:00 [queued]>
+[2024-10-30T22:01:58.088+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:01:56.101637+00:00 [queued]>
+[2024-10-30T22:01:58.089+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-30T22:01:58.104+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-10-30 22:01:56.101637+00:00
+[2024-10-30T22:01:58.109+0000] {standard_task_runner.py:72} INFO - Started process 70 to run task
+[2024-10-30T22:01:58.112+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-10-30T22:01:56.101637+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpe8kutjzt']
+[2024-10-30T22:01:58.115+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask reddit_extraction
+[2024-10-30T22:01:58.162+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-10-30T22:01:56.101637+00:00 [running]> on host 9736bc968700
+[2024-10-30T22:01:58.246+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Swapnil Deshpande' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T22:01:56.101637+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T22:01:56.101637+00:00'
+[2024-10-30T22:01:58.248+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T22:01:58.262+0000] {logging_mixin.py:190} WARNING - Version 7.8.0 of praw is outdated. Version 7.8.1 was released 5 days ago.
+[2024-10-30T22:01:58.265+0000] {logging_mixin.py:190} INFO - connected to reddit!
+[2024-10-30T22:01:58.266+0000] {logging_mixin.py:190} INFO - <praw.reddit.Reddit object at 0x7f4bff73d3f0>
+[2024-10-30T22:01:58.267+0000] {logging_mixin.py:190} INFO - Extracting posts from Python, attempt 1
+[2024-10-30T22:01:58.998+0000] {logging_mixin.py:190} INFO - Posts extracted: 1
+[2024-10-30T22:01:58.999+0000] {logging_mixin.py:190} INFO - Posts extracted: 2
+[2024-10-30T22:01:59.000+0000] {logging_mixin.py:190} INFO - Posts extracted: 3
+[2024-10-30T22:01:59.001+0000] {logging_mixin.py:190} INFO - Posts extracted: 4
+[2024-10-30T22:01:59.001+0000] {logging_mixin.py:190} INFO - Posts extracted: 5
+[2024-10-30T22:01:59.002+0000] {logging_mixin.py:190} INFO - Posts extracted: 6
+[2024-10-30T22:01:59.002+0000] {logging_mixin.py:190} INFO - Posts extracted: 7
+[2024-10-30T22:01:59.003+0000] {logging_mixin.py:190} INFO - Posts extracted: 8
+[2024-10-30T22:01:59.003+0000] {logging_mixin.py:190} INFO - Posts extracted: 9
+[2024-10-30T22:01:59.004+0000] {logging_mixin.py:190} INFO - Posts extracted: 10
+[2024-10-30T22:01:59.005+0000] {logging_mixin.py:190} INFO - Posts extracted: 11
+[2024-10-30T22:01:59.005+0000] {logging_mixin.py:190} INFO - Posts extracted: 12
+[2024-10-30T22:01:59.006+0000] {logging_mixin.py:190} INFO - Posts extracted: 13
+[2024-10-30T22:01:59.006+0000] {logging_mixin.py:190} INFO - Posts extracted: 14
+[2024-10-30T22:01:59.007+0000] {logging_mixin.py:190} INFO - Posts extracted: 15
+[2024-10-30T22:01:59.007+0000] {logging_mixin.py:190} INFO - Posts extracted: 16
+[2024-10-30T22:01:59.008+0000] {logging_mixin.py:190} INFO - Posts extracted: 17
+[2024-10-30T22:01:59.008+0000] {logging_mixin.py:190} INFO - Posts extracted: 18
+[2024-10-30T22:01:59.009+0000] {logging_mixin.py:190} INFO - Posts extracted: 19
+[2024-10-30T22:01:59.009+0000] {logging_mixin.py:190} INFO - Posts extracted: 20
+[2024-10-30T22:01:59.009+0000] {logging_mixin.py:190} INFO - Posts extracted: 21
+[2024-10-30T22:01:59.010+0000] {logging_mixin.py:190} INFO - Posts extracted: 22
+[2024-10-30T22:01:59.010+0000] {logging_mixin.py:190} INFO - Posts extracted: 23
+[2024-10-30T22:01:59.011+0000] {logging_mixin.py:190} INFO - Posts extracted: 24
+[2024-10-30T22:01:59.011+0000] {logging_mixin.py:190} INFO - Posts extracted: 25
+[2024-10-30T22:01:59.012+0000] {logging_mixin.py:190} INFO - [{'id': 'g53lxf', 'title': "Lad wrote a Python script to download Alexa voice recordings, he didn't expect this email.", 'score': 12344, 'num_comments': 133, 'author': Redditor(name='iEslam'), 'created_utc': 1587424299.0, 'url': 'https://i.redd.it/2s0dj8ob12u41.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'hoolsm', 'title': 'This post has:', 'score': 9241, 'num_comments': 435, 'author': Redditor(name='Krukerfluk'), 'created_utc': 1594386373.0, 'url': 'https://www.reddit.com/r/Python/comments/hoolsm/this_post_has/', 'over_18': False, 'edited': 1609339473.0, 'spoiler': False, 'stickied': False}, {'id': 'gftejm', 'title': 'I redesign the Python logo to make it more modern', 'score': 7865, 'num_comments': 265, 'author': Redditor(name='jessjwilliamson'), 'created_utc': 1588945149.0, 'url': 'https://i.redd.it/rxezjyf4ojx41.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': '7kpme8', 'title': 'Automate the boring stuff with python - tinder', 'score': 6718, 'num_comments': 325, 'author': Redditor(name='backprop88'), 'created_utc': 1513644476.0, 'url': 'https://gfycat.com/PointlessSimplisticAmericanquarterhorse', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'irh8l0', 'title': "I'm excited to share my first published book, Introduction to Python Programming for Business and Social Science Applications -- specifically geared towards students not specifically in computer science", 'score': 6504, 'num_comments': 249, 'author': Redditor(name='paulkaefer'), 'created_utc': 1599933196.0, 'url': 'https://i.redd.it/ebmh8z3c8rm51.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'gn9add', 'title': 'Drawing Mona Lisa with 256 circles using evolution [Github repo in comments]', 'score': 5725, 'num_comments': 120, 'author': Redditor(name='Itwist101'), 'created_utc': 1589972294.0, 'url': 'https://v.redd.it/nyzyx7uyfwz41', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'hqc7ol', 'title': 'I made a simulation using Python in which a neural network learns to race', 'score': 5697, 'num_comments': 212, 'author': Redditor(name='atqm-'), 'created_utc': 1594632457.0, 'url': 'https://v.redd.it/bgmc6q20ela51', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'ghxqod', 'title': 'Thanks to everyone’s advice, my mouse drawing algorithm has gotten much better and faster!', 'score': 5538, 'num_comments': 202, 'author': Redditor(name='Nekose'), 'created_utc': 1589235279.0, 'url': 'https://v.redd.it/sktc30zom7y41', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'iehths', 'title': 'Debugging Cheat Sheet', 'score': 5449, 'num_comments': 112, 'author': Redditor(name='HotTeenBoy'), 'created_utc': 1598100424.0, 'url': 'https://i.redd.it/p1i8awsivji51.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'dg0etx', 'title': 'Just trying to create a orbit system in python and this happened...', 'score': 5168, 'num_comments': 359, 'author': Redditor(name='LAMagicx'), 'created_utc': 1570724490.0, 'url': 'https://v.redd.it/8i70ps8doqr31', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'gbko3e', 'title': "Dev'ing an app to help visualize data from any matplotlib figure", 'score': 5075, 'num_comments': 157, 'author': Redditor(name='professormunchies'), 'created_utc': 1588348481.0, 'url': 'https://gfycat.com/lineartangeese-application-visualizer-visualizar-augmented-data', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'hmoabi', 'title': "I've designed brand new cheatsheets (x2) and handouts (x3) for matplotlib", 'score': 5036, 'num_comments': 107, 'author': Redditor(name='Nicolas-Rougier'), 'created_utc': 1594098627.0, 'url': 'https://raw.githubusercontent.com/matplotlib/cheatsheets/master/cheatsheets-1.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'hpr28u', 'title': 'I am a medical student, and I recently programmed an open-source eye-tracker for brain research', 'score': 4960, 'num_comments': 194, 'author': Redditor(name='Sebaron'), 'created_utc': 1594542550.0, 'url': 'https://v.redd.it/tqzx750wzda51', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': '7jti46', 'title': 'MS is considering official Python integration with Excel, and is asking for input', 'score': 4621, 'num_comments': 395, 'author': Redditor(name='Chilangosta'), 'created_utc': 1513275865.0, 'url': 'https://i.imgur.com/l2f9Zvb.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'gzila7', 'title': 'Python 3 in One Pic', 'score': 4583, 'num_comments': 168, 'author': Redditor(name='TheInsaneApp'), 'created_utc': 1591689147.0, 'url': 'https://i.redd.it/dixavkhibu351.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'f55076', 'title': "I've made a 3D scanner that's fully automated using Python script on Android phone!", 'score': 4533, 'num_comments': 88, 'author': Redditor(name='redditNewUser2017'), 'created_utc': 1581923551.0, 'url': 'https://v.redd.it/n8nsbsq0pfh41', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'ga7y7f', 'title': 'I made a little program that mutes spotify ads because i dont have the money to get premium . Not anything special but i think its quite neat. Any ideas on cool python projects i can build ?', 'score': 4453, 'num_comments': 342, 'author': Redditor(name='IMFAILINGENGLISH'), 'created_utc': 1588160766.0, 'url': 'https://i.redd.it/47qqwabpvqv41.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'hg9sk8', 'title': 'The only way to satisfy a programmer on his birthday!', 'score': 4448, 'num_comments': 234, 'author': Redditor(name='kookeo'), 'created_utc': 1593185678.0, 'url': 'https://i.redd.it/cbz37hmdx9751.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'e9fgjp', 'title': 'Happy Holidays! Made a user-directed greeting card using Python Turtle Graphics', 'score': 4394, 'num_comments': 89, 'author': Redditor(name='Igor_d7'), 'created_utc': 1576108262.0, 'url': 'https://v.redd.it/uo2qj6bed3441', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'cmdbuf', 'title': "Python's response to MATLAB", 'score': 4286, 'num_comments': 376, 'author': Redditor(name='Alexanderdaawesome'), 'created_utc': 1565023080.0, 'url': 'https://i.redd.it/lunmi0varne31.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'fjqoxv', 'title': 'Laid off for 8 weeks. Anyone else starting their python journey?', 'score': 4255, 'num_comments': 314, 'author': Redditor(name='HotSwap_'), 'created_utc': 1584386583.0, 'url': 'https://i.redd.it/uqia9wc853n41.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'fr5561', 'title': '[Beginner’s Guide] How to start programming in Python', 'score': 4203, 'num_comments': 117, 'author': Redditor(name='MrGrj'), 'created_utc': 1585484807.0, 'url': 'https://i.redd.it/kwubxzttulp41.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': '7mwgtw', 'title': 'Python Cheet Sheet for begineers', 'score': 4194, 'num_comments': 124, 'author': Redditor(name='winner_godson'), 'created_utc': 1514576045.0, 'url': 'https://i.redd.it/4iklecheyw601.jpg', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'gs7xdb', 'title': 'A Python GUI for uninstalling the default Windows 10 apps.', 'score': 4155, 'num_comments': 199, 'author': Redditor(name='Goldtom'), 'created_utc': 1590678403.0, 'url': 'https://i.redd.it/r51f4jvzti151.png', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}, {'id': 'goldxf', 'title': 'A tool that copies a selected area of your screen, not as a picture, but as pastable text (GitHub in comments)', 'score': 4128, 'num_comments': 189, 'author': Redditor(name='PR0T064'), 'created_utc': 1590161211.0, 'url': 'https://v.redd.it/6guhj6h62c051', 'over_18': False, 'edited': False, 'spoiler': False, 'stickied': False}]
+[2024-10-30T22:01:59.030+0000] {logging_mixin.py:190} INFO -         id  ... stickied
+0   g53lxf  ...    False
+1   hoolsm  ...    False
+2   gftejm  ...    False
+3   7kpme8  ...    False
+4   irh8l0  ...    False
+5   gn9add  ...    False
+6   hqc7ol  ...    False
+7   ghxqod  ...    False
+8   iehths  ...    False
+9   dg0etx  ...    False
+10  gbko3e  ...    False
+11  hmoabi  ...    False
+12  hpr28u  ...    False
+13  7jti46  ...    False
+14  gzila7  ...    False
+15  f55076  ...    False
+16  ga7y7f  ...    False
+17  hg9sk8  ...    False
+18  e9fgjp  ...    False
+19  cmdbuf  ...    False
+20  fjqoxv  ...    False
+21  fr5561  ...    False
+22  7mwgtw  ...    False
+23  gs7xdb  ...    False
+24  goldxf  ...    False
+
+[25 rows x 11 columns]
+[2024-10-30T22:01:59.031+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-30T22:01:59.040+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T22:01:59.041+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-10-30T22:01:56.101637+00:00, execution_date=20241030T220156, start_date=20241030T220158, end_date=20241030T220159
+[2024-10-30T22:01:59.092+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-30T22:01:59.107+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T22:01:59.112+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
