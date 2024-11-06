@@ -1,6 +1,6 @@
 # Reddit Data Pipeline
 
-![Architecture Diagram](images/Blank_diagram.jpeg)
+![Architecture Diagram](images/reddit_data_pipeline_diagram.png)
 
 This project provides a comprehensive data pipeline solution to extract, transform, and load (ETL) Reddit data into a Redshift data warehouse. The pipeline leverages a combination of tools and services, including Apache Airflow, Celery, PostgreSQL, Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift, to ensure efficient and scalable data management.
 
